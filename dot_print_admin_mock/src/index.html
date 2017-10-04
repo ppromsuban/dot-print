@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bootstrap 4 Starter Pack</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <!-- <div class="row">
+    <div class="col-3">
+      <div class="list-group d-flex flex-column h-100 fixed" id="nav-list-tab" role="tab-list">
+        <h1 class="pl-1">Admin</h1>
+        <a href="#home-content" class="list-group-item list-group-item-action" data-toggle="list">
+          <i class="fa fa-home"></i>
+          Home
+        </a>
+        <a href="#order-content" class="list-group-item list-group-item-action" data-toggle="list">
+          <i class="fa fa-home"></i>
+          Order
+        </a>
+        <a href="#report-content" class="list-group-item list-group-item-action" data-toggle="list">
+          <i class="fa fa-home"></i>
+          Report
+        </a>
+        <a href="#members-content" class="list-group-item list-group-item-action" data-toggle="list">
+          <i class="fa fa-home"></i>
+          Members
+        </a>
+        <a href="#product-menu-content" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" aria-expanded="false" data-toggle="collapse">
+          <span>
+              <i class="fa fa-home"></i>
+              Product Management
+          </span>
+          <i class="fa fa-chevron-right"></i>
+          <i class="fa fa-chevron-down"></i>
+        </a>
+        <div class="collapse" id="product-menu-content">
+          <a href="#product-content" class="list-group-item list-group-item-action dropdown-item" data-toggle="list">Products</a>
+          <a href="#settings-content" class="list-group-item list-group-item-action dropdown-item" data-toggle="list">Settings</a>
+        </div>
+        <a href="#content-content" class="list-group-item list-group-item-action" data-toggle="list">
+          <i class="fa fa-home"></i>
+          Content Management
+        </a>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="tab-content" id="navContent">
+        <div class="tab-pane fade show active" id="home-content" role="tabpanel">
+          Test home
+        </div>
+        <div class="tab-pane fade show" id="order-content" role="tabpanel">
+          Test Order
+        </div>
+        <div class="tab-pane fade show" id="report-content" role="tabpanel">
+          Test Report
+        </div>
+        <div class="tab-pane fade show" id="members-content" role="tabpanel">
+          Test members
+        </div>
+        <div class="tab-pane fade show" id="product-content" role="tabpanel">
+          Test Products
+        </div>
+        <div class="tab-pane fade show" id="settings-content" role="tabpanel">
+            Test Settings
+        </div>
+        <div class="tab-pane fade show" id="content-content" role="tabpanel">
+          Test content
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+  <div class="row no-gutters h-100">
+    <div class="col-3 bg-light border border-top-0 border-secondary mr-1" id="sideNav">
+      <h1 class="text-center text-success">Admin</h1>
+      <hr/>
+      <ul class="nav  nav-pills navbar-light flex-column" role="tablist">
+        <li class="nav-item ">
+          <a href="#home-content" class="nav-link active" data-toggle="tab">
+              <i class="fa fa-home"></i>
+              Home
+            </a>
+        </li>
+        <li class="nav-item">
+          <a href="#order-content" class="nav-link" data-toggle="tab">
+              <i class="fa fa-home"></i>
+              Order
+            </a>
+        </li>
+        <li class="nav-item">
+          <a href="#report-content" class="nav-link" data-toggle="tab">
+            <i class="fa fa-home"></i>
+            Report
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#members-content" class="nav-link" data-toggle="tab">
+            <i class="fa fa-home"></i>
+            Members
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#product-menu-content" class="nav-link d-flex justify-content-between align-items-center" aria-expanded="false"
+            data-toggle="collapse">
+            <span>
+                <i class="fa fa-home"></i>
+                Product Management
+            </span>
+            <i class="fa fa-chevron-right"></i>
+            <i class="fa fa-chevron-down"></i>
+          </a>
+          <div class="container collapse" id="product-menu-content">
+            <a href="#product-content" class="nav-link" data-toggle="tab">Products</a>
+            <a href="#settings-content" class="nav-link" data-toggle="tab">Settings</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#content-content" class="nav-link" data-toggle="tab">
+            <i class="fa fa-home"></i>
+            Content Management
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-9 ml-auto px-2">
+      <div class="tab-content" id="navContent">
+        <div class="tab-pane fade show active" id="home-content" role="tabpanel">
+          <section id="homeReportingDetails">
+            <header>
+              <h4 class="text-success text-center">Home</h4>
+            </header>
+            <div class="d-flex flex-row justify-content-between flex-wrap text-center card-deck">
+              <div class="w-25 card border-primary">
+                <div class="card-body">
+                  <p class="card-text">
+                    30
+                  </p>
+                </div>
+                <div class="card-footer bg-primary">
+                  <h4 class="card-title">Today's Orders</h4>
+                </div>
+              </div>
+              <div class="w-25 card border-success">
+                <div class="card-body">
+                  <p class="card-text">
+                    100
+                  </p>
+                </div>
+                <div class="card-footer bg-success">
+                  <h4 class="card-title">Today's Visits</h4>
+                </div>
+              </div>
+              <div class="w-25 card border-warning">
+                <div class="card-body">
+                  <p class="card-text">
+                    100000
+                  </p>
+                </div>
+                <div class="card-footer bg-warning">
+                  <h4 class="card-title">Total Members</h4>
+                </div>
+              </div>
+              <div class="w-25 card border-danger">
+                <div class="card-body">
+                  <p class="card-text">
+                    infinity
+                  </p>
+                </div>
+                <div class="card-footer bg-danger">
+                  <h4 class="card-title">Month Revenue</h4>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="homeReportGraph">
+            <div class="card border-primary my-1">
+              <div class="card-header bg-secondary text-white">
+                Report
+              </div>
+              <div class="card-body">
+                <canvas id="myChart" class="h-20"></canvas>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="tab-pane fade show" id="order-content" role="tabpanel">
+          <h4 class="text-center">Order</h4>
+        </div>
+        <div class="tab-pane fade show" id="report-content" role="tabpanel">
+          Test Report
+        </div>
+        <div class="tab-pane fade show" id="members-content" role="tabpanel">
+          Test members
+        </div>
+        <div class="tab-pane fade show" id="product-content" role="tabpanel">
+          Test Products
+        </div>
+        <div class="tab-pane fade show" id="settings-content" role="tabpanel">
+          Test Settings
+        </div>
+        <div class="tab-pane fade show" id="content-content" role="tabpanel">
+          Test content
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Header -->
+
+  <!-- Report -->
+
+  <!-- Graph -->
+
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

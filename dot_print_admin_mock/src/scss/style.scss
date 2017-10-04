@@ -1,0 +1,23 @@
+a[aria-expanded=true] {
+    .fa-chevron-right {
+        display: none;
+    }
+}
+
+a[aria-expanded=false] {
+    .fa-chevron-down {
+        display: none;
+    }
+}
+
+.nav-item {
+    a {
+        color: black;
+    }
+}
+
+#sideNav {
+    position: fixed;
+    top:0;
+    bottom: 0;
+}
