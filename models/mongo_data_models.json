@@ -1,0 +1,120 @@
+// Users
+
+{
+    "_id": "ObjectId",
+    "username": "String",
+    "password": "String hashed",
+    "first_name": "String",
+    "last_name": "String",
+    "dob": "String",
+    "email": "String",
+    "phone_num": "String",
+    "address": [{
+        "address_info": "String",
+        "street": "String",
+        "sub-city": "String",
+        "city": "String",
+        "province": "String",
+        "postal_code": "String"
+    }],
+    "billing": [{
+        "card_token": "String"
+    }],
+    "order": [
+        "OrderId from SQL 1",
+        "OrderId from SQL2"
+    ],
+    "date_created": "Date",
+    "created_by": "String",
+    "date_modified": "Date",
+    "modified_by": "String"
+    /* Optional
+    // Problem will exist if we dont store user's uploaded image to DB
+    "shopping_cart":  [
+        "product_id": "ObjectId"
+    ]
+    */
+},
+
+// Tags
+// Assumption: All collections and products must have a tag
+// Advantages: faster query (select product where product ids in tag) than (select product where tags in tag_name)
+{
+    "_id": "ObjectId",
+    "name": "String",
+    "product_ids": [
+        "ObjectId of product1",
+        "ObjectId of product2"
+    ],
+    "collection_ids": [
+        "ObjectId of collection1",
+        "ObjectId of collection2"
+    ],
+    "date_created": "Date",
+    "created_by": "String",
+    "date_modified": "Date",
+    "modified_by": "String"
+},
+
+// Collections
+{
+    "_id": "ObjectId",
+    "name": "String",
+    "image_url": "URL String", // real image is stored in cloud storage
+    "tag_ids": [
+        // In case want to add more tags in the future
+        "ObjectId of tag1"
+    ],
+    "product_ids": [
+        "ObjectId of product1",
+        "ObjectId of product2"
+    ],
+    "date_created": "Date",
+    "created_by": "String",
+    "date_modified": "Date",
+    "modified_by": "String"
+}
+
+// Products
+{
+    "_id": "ObjectId",
+    "name": "String",
+    "image_url": "URL String", // Real image is stored in cloud storage
+    "price": "Double",
+    "type": [
+        "Canvas", 
+        "Poster"
+    ],
+    "option_group_id": "ObjectId",
+    "date_created": "Date",
+    "created_by": "String",
+    "date_modified": "Date",
+    "modified_by": "String"
+}
+
+// Option Group
+{
+    "_id": "ObjectId",
+    "name": "String",
+    "type": "String",
+    "is_default": "Boolean",
+    "start_date": "Date",
+    "end_date": "Date",
+    "options": [{
+        "size": "String",
+        "border": "URL of image", //If type is poster then "paper": "URL of image"
+        "price": "Double",
+        "shipping_price": "Double"
+    }]
+}
+
+// Product configs
+// key: Size
+// types: ["poster,"canvas"]
+// values: ["A4", "A3", "A2", "A1"]
+// 
+{
+    "key": "String",
+    "types": ["String", "String"],
+    "values": ["Whatever 1", "Whatever 2"]
+}
